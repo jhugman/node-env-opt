@@ -5,7 +5,7 @@ module.exports = function findOptions (keyList, optionalPrefixEnv) {
   if (optionalPrefixEnv) {
     prefix = process.env[optionalPrefixEnv] || '';
   }
-  _.each(keyList, function (key) {
+  keyList.forEach(function (key) {
     var value = process.env[prefix + key];
     
     if (value === undefined) {
